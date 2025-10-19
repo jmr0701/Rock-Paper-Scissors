@@ -8,3 +8,8 @@ function getComputerChoice (){
         return "Scissors";
     }
 };
+
+function getHumanChoice (){
+    playerChoice = prompt ("Rock, paper or scissors?");
+    return playerChoice;
+}
