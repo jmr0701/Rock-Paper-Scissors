@@ -2,6 +2,21 @@ let humanScore = 0;
 let computerScore = 0;
 let tiedScore = 0;
 
+function playGame (){
+
+    for (i=0; i<5; i++){
+        playRound ();
+    }
+
+    if (humanScore > computerScore){
+        console.log ("You are the winner!");
+    } else if (humanScore < computerScore){
+        console.log ("You lose! The computer is the winner!");
+    } else if (humanScore === computerScore){
+        console.log ("It's a tie!");
+    }
+}
+
 function playRound (){
     let computerSelection = getComputerChoice().toLowerCase();
     let playerSelection = getHumanChoice().toLowerCase();
