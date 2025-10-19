@@ -90,3 +90,5 @@ function getHumanChoice (){
     playerChoice = prompt ("Rock, paper or scissors?");
     return playerChoice;
 }
+
+playGame()
