@@ -4,6 +4,23 @@ body,html {
   font-family: sans-serif;
 }
 
+.windowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.playerWindow, .computerWindow {
+  background-color: #ccc;
+  border: 1px solid grey;
+  height: 30vw;
+  width: 30vw;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .handButtons {
     display: flex;
     flex-direction: row;
