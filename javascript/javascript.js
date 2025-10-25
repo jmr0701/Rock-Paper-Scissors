@@ -38,40 +38,41 @@ function playGame (btnSelection){
 }
 
 function playRound(btnSelection) {
-  const computerSelection = getComputerChoice();
-  const playerSelection = btnSelection;
 
-  console.log(`You played: ${playerSelection}`);
-  console.log(`The computer played: ${computerSelection}`);
+    const computerSelection = getComputerChoice();
+    const playerSelection = btnSelection;
 
-  if (playerSelection === computerSelection) {
-    console.log("It's a tie!");
-    results.textContent = "It's a tie!";
-    return;
-  }
+    console.log(`You played: ${playerSelection}`);
+    console.log(`The computer played: ${computerSelection}`);
 
-  switch (`${playerSelection}|${computerSelection}`) {
+    if (playerSelection === computerSelection) {
+        console.log("It's a tie!");
+        results.textContent = "It's a tie!";
+        return;
+    }
 
-    // Player is the winner
-    case 'Rock|Scissors':
-    case 'Paper|Rock':
-    case 'Scissors|Paper':
-      console.log("You win!");
-      humanScore++;
-      pPoints.textContent = humanScore;
-      results.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
-      break;
+    switch (`${playerSelection}|${computerSelection}`) {
 
-    // Computer is the winner
-    case 'Rock|Paper':
-    case 'Paper|Scissors':
-    case 'Scissors|Rock':
-      console.log("Computer wins!");
-      computerScore++;
-      cPoints.textContent = computerScore;
-      results.textContent = `Computer wins! ${computerSelection} beats ${playerSelection}`;
-      break;
-  }
+        // Player is the winner
+        case 'Rock|Scissors':
+        case 'Paper|Rock':
+        case 'Scissors|Paper':
+            console.log("You win!");
+            humanScore++;
+            pPoints.textContent = humanScore;
+            results.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
+            break;
+
+        // Computer is the winner
+        case 'Rock|Paper':
+        case 'Paper|Scissors':
+        case 'Scissors|Rock':
+            console.log("Computer wins!");
+            computerScore++;
+            cPoints.textContent = computerScore;
+            results.textContent = `Computer wins! ${computerSelection} beats ${playerSelection}`;
+            break;
+    }
 
     //Display the icon of the hand played that round by the player and computer
     document.querySelector('.playerWindow').innerHTML = `<img src="images/${playerSelection}.svg" alt=${playerSelection} style="width:100%;height:100%;object-fit:contain;">`;
@@ -91,5 +92,3 @@ function getComputerChoice (){
         return "Scissors";
     }
 };
-
-//playGame()
