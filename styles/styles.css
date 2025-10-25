@@ -6,7 +6,7 @@ body,html {
 
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .gameInfo {
@@ -23,7 +23,7 @@ h1 {
   background-color: dodgerblue;
   text-align: center;
   color: whitesmoke;
-  font-size: 25px;
+  font-size: 20px;
   margin: 20px 0px;
   padding: 0px 10px;
   border-radius: 25px;
