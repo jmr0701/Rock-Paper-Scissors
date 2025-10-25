@@ -53,11 +53,27 @@ h1 {
   border-radius: 25px;
 }
 
+.resultsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 30vw;
+  margin: 0 auto;
+}
+
+.resultsInfo {
+  background-color: dodgerblue;
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .handButtons {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: -47px;
     margin-top: 10px;
     gap: 10px;
 }
