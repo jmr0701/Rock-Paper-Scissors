@@ -6,6 +6,7 @@ let pPoints = document.querySelector("#pPoints");
 pPoints.textContent = humanScore;
 let cPoints = document.querySelector("#cPoints");
 cPoints.textContent = computerScore;
+let results = document.querySelector(".resultsInfo");
 
 const btnRock = document.querySelector("#btnRock");
 btnRock.addEventListener("click", function(e) {
@@ -55,6 +56,7 @@ function playRound (btnSelection){
         console.log("Computer wins!");
         computerScore++;
         cPoints.textContent = computerScore;
+        results.textContent = `"Computer wins! ${computerSelection} beats ${playerSelection}"`;
 
     }
     if (playerSelection === "Rock" && computerSelection === "Scissors"){
@@ -63,6 +65,7 @@ function playRound (btnSelection){
         console.log("You win!");
         humanScore++
         pPoints.textContent = humanScore;
+        results.textContent = `"You win! ${playerSelection} beats ${computerSelection}"`;
     }
 
     if (playerSelection === "Paper" && computerSelection === "Rock"){
@@ -71,6 +74,7 @@ function playRound (btnSelection){
         console.log("You win!");
         humanScore++
         pPoints.textContent = humanScore;
+        results.textContent = `"You win! ${playerSelection} beats ${computerSelection}"`;
     }
     if (playerSelection === "Paper" && computerSelection === "Scissors"){
         console.log("You played: " + playerSelection);
@@ -78,6 +82,7 @@ function playRound (btnSelection){
         console.log("Computer wins!");
         computerScore++;
         cPoints.textContent = computerScore;
+        results.textContent = `"You win! ${playerSelection} beats ${computerSelection}"`;
     }
 
     if (playerSelection === "Scissors" && computerSelection === "Rock"){
@@ -86,6 +91,7 @@ function playRound (btnSelection){
         console.log("Computer wins!");
         computerScore++;
         cPoints.textContent = computerScore;
+        results.textContent = `"Computer wins! ${computerSelection} beats ${playerSelection}"`;
     }
     if (playerSelection === "Scissors" && computerSelection === "Paper"){
         console.log("You played: " + playerSelection);
@@ -93,6 +99,7 @@ function playRound (btnSelection){
         console.log("You win!");
         humanScore++
         pPoints.textContent = humanScore;
+        results.textContent = `"You win! ${playerSelection} beats ${computerSelection}"`;
     }
 
 
