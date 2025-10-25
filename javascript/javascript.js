@@ -2,6 +2,11 @@ let humanScore = 0;
 let computerScore = 0;
 let tiedScore = 0;
 
+let pPoints = document.querySelector("#pPoints");
+pPoints.textContent = humanScore;
+let cPoints = document.querySelector("#cPoints");
+cPoints.textContent = computerScore;
+
 const btnRock = document.querySelector("#btnRock");
 btnRock.addEventListener("click", function(e) {
   playRound("Rock");
@@ -49,26 +54,30 @@ function playRound (btnSelection){
         console.log("The computer played: " + computerSelection);
         console.log("Computer wins!");
         computerScore++;
+        cPoints.textContent = computerScore;
 
     }
     if (playerSelection === "Rock" && computerSelection === "Scissors"){
         console.log("You played: " + playerSelection);
         console.log("The computer played: " + computerSelection);
         console.log("You win!");
-        humanScore++;
+        humanScore++
+        pPoints.textContent = humanScore;
     }
 
     if (playerSelection === "Paper" && computerSelection === "Rock"){
         console.log("You played: " + playerSelection);
         console.log("The computer played: " + computerSelection);
         console.log("You win!");
-        humanScore++;
+        humanScore++
+        pPoints.textContent = humanScore;
     }
     if (playerSelection === "Paper" && computerSelection === "Scissors"){
         console.log("You played: " + playerSelection);
         console.log("The computer played: " + computerSelection);
         console.log("Computer wins!");
         computerScore++;
+        cPoints.textContent = computerScore;
     }
 
     if (playerSelection === "Scissors" && computerSelection === "Rock"){
@@ -76,13 +85,19 @@ function playRound (btnSelection){
         console.log("The computer played: " + computerSelection);
         console.log("Computer wins!");
         computerScore++;
+        cPoints.textContent = computerScore;
     }
     if (playerSelection === "Scissors" && computerSelection === "Paper"){
         console.log("You played: " + playerSelection);
         console.log("The computer played: " + computerSelection);
         console.log("You win!");
-        humanScore++;
+        humanScore++
+        pPoints.textContent = humanScore;
     }
+
+
+    document.querySelector('.playerWindow').innerHTML = `<img src="images/${playerSelection}.svg" alt=${playerSelection} style="width:100%;height:100%;object-fit:contain;">`;
+    document.querySelector('.computerWindow').innerHTML = `<img src="images/${computerSelection}.svg" alt=${computerSelection} style="width:100%;height:100%;object-fit:contain;">`;
 
     console.log ("Your score is: " + humanScore);
     console.log ("The computer's score is: " + computerScore);
